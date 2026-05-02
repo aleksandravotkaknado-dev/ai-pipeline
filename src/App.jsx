@@ -425,7 +425,7 @@ function LessonCard({ lesson, idx, color }) {
       </button>
       {open && (
         <div style={{ padding: "0 15px 16px 47px", animation: "lo 0.2s ease" }}>
-          <div style={{ color: "#64748b", fontSize: 13, lineHeight: 1.85, whiteSpace: "pre-line", fontFamily: "'DM Sans',sans-serif" }}>
+          <div style={{ color: "#64748b", fontSize: 13, lineHeight: 1.85, whiteSpace: "pre-line", fontFamily: "'DM Sans',sans-serif", textAlign:"left" }}>
             {lesson.content}
           </div>
           <div style={{ marginTop: 12, display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center" }}>
@@ -472,7 +472,7 @@ export default function App() {
   const newCount = MODULES.filter(m => m.isNew).length;
 
   return (
-    <div ref={top} style={{ minHeight: "100vh", background: "#080b16", color: "#e2e8f0", fontFamily: "'DM Sans',sans-serif" }}>
+    <div ref={top} style={{ minHeight: "100vh", background: "#080b16", color: "#e2e8f0", fontFamily: "'DM Sans',sans-serif", width:"100%" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
         @keyframes su{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
@@ -491,7 +491,7 @@ export default function App() {
             <div style={{ width:28,height:28,borderRadius:7,background:"linear-gradient(135deg,#f97316,#8b5cf6)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:14 }}>🤖</div>
             <span style={{ color:"#f8fafc",fontFamily:"'Fraunces',serif",fontSize:16,fontWeight:900,letterSpacing:"-0.02em" }}>ИИ-сервис с нуля</span>
           </button>
-          <span style={{ fontSize:10,color:"#1e3a5f",fontFamily:"'JetBrains Mono',monospace" }}>{MODULES.length} мод · {totalLessons} уроков</span>
+          <span style={{ fontSize:10,color:"#1e3a5f",fontFamily:"'JetBrains Mono',monospace" }}>{MODULES.length} мод · {totalLessons} урока</span>
         </div>
       </header>
 
@@ -503,16 +503,16 @@ export default function App() {
           <div style={{ marginBottom:40 }}>
             <div style={{ display:"inline-flex",alignItems:"center",gap:6,padding:"4px 11px",borderRadius:20,background:"rgba(249,115,22,0.08)",border:"1px solid rgba(249,115,22,0.18)",marginBottom:16 }}>
               <span style={{ width:5,height:5,borderRadius:"50%",background:"#f97316" }}/>
-              <span style={{ fontSize:10,color:"#f97316",fontFamily:"'JetBrains Mono',monospace",fontWeight:700,letterSpacing:"0.05em" }}>{newCount} модулей · {totalLessons} уроков · от идеи до первых продаж</span>
+              <span style={{ fontSize:10,color:"#f97316",fontFamily:"'JetBrains Mono',monospace",fontWeight:700,letterSpacing:"0.05em" }}>{newCount} модулей · {totalLessons} урока · от идеи до первых продаж</span>
             </div>
-            <h1 style={{ fontFamily:"'Fraunces',serif",fontSize:"clamp(26px,5.5vw,44px)",fontWeight:900,lineHeight:1.1,letterSpacing:"-0.03em",marginBottom:12 }}>
+            <h1 style={{ fontFamily:"'Fraunces',serif",fontSize:"clamp(26px,5.5vw,44px)",fontWeight:900,lineHeight:1.1,letterSpacing:"-0.03em",marginBottom:12,color:"#f8fafc" }}>
               Как создать<br/>
               <span style={{ background:"linear-gradient(135deg,#f97316,#8b5cf6,#06b6d4)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent" }}>
                 собственный ИИ-сервис
               </span>
             </h1>
-            <p style={{ color:"#475569",fontSize:14,maxWidth:480,lineHeight:1.7 }}>
-              Полный пайплайн: от поиска идеи и валидации до вайбкодинга, деплоя и подключения Lava.top. Именно так был создан сервис «Что ей ответить?» на mir.avotkaknado.space — без найма разработчиков.
+            <p style={{ color:"#475569",fontSize:14,maxWidth:480,lineHeight:1.7,textAlign:"left" }}>
+              Полный пайплайн: от поиска идеи и валидации до вайбкодинга, деплоя и подключения платёжной системы. Именно так был создан сервис «Что ей ответить?» на mir.avotkaknado.space — без найма разработчиков.
             </p>
             <div style={{ marginTop:16,display:"flex",gap:10,flexWrap:"wrap" }}>
               <a href="https://mir.avotkaknado.space" target="_blank" rel="noopener noreferrer"
@@ -554,10 +554,10 @@ export default function App() {
               style={{ width:52,height:52,borderRadius:"50%",objectFit:"cover",flexShrink:0,border:"2px solid rgba(249,115,22,0.4)" }}
             />
             <div style={{ flex:1,minWidth:0 }}>
-              <div style={{ fontSize:13,color:"#f1f5f9",fontWeight:600,marginBottom:3,fontFamily:"'DM Sans',sans-serif" }}>Хотите создать и продавать свой ИИ-сервис?</div>
-              <div style={{ fontSize:12,color:"#475569",lineHeight:1.5,fontFamily:"'DM Sans',sans-serif" }}>Я помогаю строить продукты с нуля — от идеи до первых продаж. Пишите в Telegram.</div>
+              <div style={{ fontSize:13,color:"#f1f5f9",fontWeight:600,marginBottom:3,fontFamily:"'DM Sans',sans-serif",textAlign:"left" }}>Хотите создать и продавать свой ИИ-сервис?</div>
+              <div style={{ fontSize:12,color:"#475569",lineHeight:1.5,fontFamily:"'DM Sans',sans-serif",textAlign:"left" }}>Я помогаю строить продукты с нуля — от идеи до первых продаж. Пишите в Telegram.</div>
             </div>
-            <div style={{ padding:"8px 14px",borderRadius:7,background:"rgba(249,115,22,0.1)",border:"1px solid rgba(249,115,22,0.3)",color:"#f97316",fontSize:12,fontWeight:600,fontFamily:"'DM Sans',sans-serif",whiteSpace:"nowrap",flexShrink:0 }}>
+            <div style={{ padding:"8px 14px",borderRadius:7,background:"rgba(249,115,22,0.1)",border:"1px solid rgba(249,115,22,0.3)",color:"#f97316",fontSize:12,fontWeight:600,fontFamily:"'DM Sans',sans-serif",whiteSpace:"nowrap",flexShrink:0,minWidth:"max-content" }}>
               Написать →
             </div>
           </a>
@@ -603,10 +603,10 @@ export default function App() {
               style={{ width:52,height:52,borderRadius:"50%",objectFit:"cover",flexShrink:0,border:"2px solid rgba(249,115,22,0.4)" }}
             />
             <div style={{ flex:1,minWidth:0 }}>
-              <div style={{ fontSize:13,color:"#f1f5f9",fontWeight:600,marginBottom:3,fontFamily:"'DM Sans',sans-serif" }}>Хотите создать и продавать свой ИИ-сервис?</div>
-              <div style={{ fontSize:12,color:"#475569",lineHeight:1.5,fontFamily:"'DM Sans',sans-serif" }}>Я помогаю строить продукты с нуля — от идеи до первых продаж. Пишите в Telegram.</div>
+              <div style={{ fontSize:13,color:"#f1f5f9",fontWeight:600,marginBottom:3,fontFamily:"'DM Sans',sans-serif",textAlign:"left" }}>Хотите создать и продавать свой ИИ-сервис?</div>
+              <div style={{ fontSize:12,color:"#475569",lineHeight:1.5,fontFamily:"'DM Sans',sans-serif",textAlign:"left" }}>Я помогаю строить продукты с нуля — от идеи до первых продаж. Пишите в Telegram.</div>
             </div>
-            <div style={{ padding:"8px 14px",borderRadius:7,background:"rgba(249,115,22,0.1)",border:"1px solid rgba(249,115,22,0.3)",color:"#f97316",fontSize:12,fontWeight:600,fontFamily:"'DM Sans',sans-serif",whiteSpace:"nowrap",flexShrink:0 }}>
+            <div style={{ padding:"8px 14px",borderRadius:7,background:"rgba(249,115,22,0.1)",border:"1px solid rgba(249,115,22,0.3)",color:"#f97316",fontSize:12,fontWeight:600,fontFamily:"'DM Sans',sans-serif",whiteSpace:"nowrap",flexShrink:0,minWidth:"max-content" }}>
               Написать →
             </div>
           </a>
@@ -643,7 +643,7 @@ export default function App() {
               </div>
             </div>
             <div style={{ marginLeft:60,color:"#334155",fontSize:12.5,fontFamily:"'DM Sans',sans-serif" }}>
-              {current.desc} · {current.lessons.length} уроков
+              {current.desc} · {current.lessons.length} урока
             </div>
           </div>
 
@@ -662,10 +662,10 @@ export default function App() {
               style={{ width:48,height:48,borderRadius:"50%",objectFit:"cover",flexShrink:0,border:"2px solid rgba(249,115,22,0.4)" }}
             />
             <div style={{ flex:1,minWidth:0 }}>
-              <div style={{ fontSize:13,color:"#f1f5f9",fontWeight:600,marginBottom:3 }}>Хотите создать и продавать свой ИИ-сервис?</div>
-              <div style={{ fontSize:12,color:"#475569",lineHeight:1.5 }}>Я помогаю строить продукты с нуля — от идеи до первых продаж.</div>
+              <div style={{ fontSize:13,color:"#f1f5f9",fontWeight:600,marginBottom:3,textAlign:"left" }}>Хотите создать и продавать свой ИИ-сервис?</div>
+              <div style={{ fontSize:12,color:"#475569",lineHeight:1.5,textAlign:"left" }}>Я помогаю строить продукты с нуля — от идеи до первых продаж.</div>
             </div>
-            <div style={{ padding:"8px 14px",borderRadius:7,background:"rgba(249,115,22,0.1)",border:"1px solid rgba(249,115,22,0.3)",color:"#f97316",fontSize:12,fontWeight:600,whiteSpace:"nowrap",flexShrink:0 }}>
+            <div style={{ padding:"8px 14px",borderRadius:7,background:"rgba(249,115,22,0.1)",border:"1px solid rgba(249,115,22,0.3)",color:"#f97316",fontSize:12,fontWeight:600,whiteSpace:"nowrap",flexShrink:0,minWidth:"max-content" }}>
               Написать →
             </div>
           </a>
